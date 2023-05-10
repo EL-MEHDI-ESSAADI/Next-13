@@ -18,7 +18,7 @@ async function fetchRepo(name: string) {
   );
 
   await new Promise((resolve) =>
-    setTimeout(resolve, 5000)
+    setTimeout(resolve, 1000)
   ); // Wait 1 second
 
   const repo: Repo = await response.json();

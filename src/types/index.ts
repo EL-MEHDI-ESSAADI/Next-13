@@ -110,3 +110,34 @@ interface License {
   url: string;
   node_id: string;
 }
+
+export type Dirs = Dir[];
+
+interface Dir {
+  name: string;
+  path: string;
+  sha: string;
+  size: number;
+  url: string;
+  html_url: string;
+  git_url: string;
+  download_url?: string;
+  type: string;
+  _links: DirLinks;
+}
+
+interface DirLinks {
+  self: string;
+  git: string;
+  html: string;
+}
+
+export type CoursesType = CourseType[];
+
+export interface CourseType {
+  id: number;
+  title: string;
+  description: string;
+  link: string;
+  level: string;
+}
